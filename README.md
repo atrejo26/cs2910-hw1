@@ -17,7 +17,7 @@ The output appears in the terminal panel at the bottom.
 
 ## Notes
 
-Add any notes about your solution here.
+MyDate: takes 3 ints of a date and returns them as a string with toString()
 
 ## Course Policy
 

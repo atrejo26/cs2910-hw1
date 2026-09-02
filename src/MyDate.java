@@ -29,7 +29,7 @@ public class MyDate {
         if(d >= 1 && d <= 31) {
             day = d;
         }
-    }
+    } 
 
     public int getYear() {
         return year;
