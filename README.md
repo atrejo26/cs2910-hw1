@@ -1,11 +1,10 @@
-# [Project Title]
+# lab 0 CSC2910
 
-Replace this project title with the lab or assignment name.
-
+this is first lab
 ## Your Information
 
-- **Name:**
-- **Date:**
+- **Rey Trejo:**
+- **9/2/2026:**
 
 ## How to Run
 
