@@ -18,6 +18,8 @@ The output appears in the terminal panel at the bottom.
 ## Notes
 
 MyDate: takes 3 ints of a date and returns them as a string with toString()
+Pixel: takes 3 ints 0 through 255 to represent the 3 rgb color values
+
 
 ## Course Policy
 
