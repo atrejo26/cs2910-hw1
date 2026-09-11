@@ -3,6 +3,10 @@ public class Pixel {
     private int green;
     private int blue;
 
+    //default constructor if empty
+    public Pixel() {
+        this(0, 0, 0); 
+    }
     public Pixel(int red, int green, int blue) {
         setRed(red);
         setGreen(green);

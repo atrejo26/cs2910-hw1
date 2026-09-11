@@ -8,6 +8,14 @@ public class Driver {
 
         Pixel Pixel;
         Pixel = new Pixel(25, 20, 255);
-        System.out.println(Pixel.toString());
+        System.out.println("Pixel Test:\n" + Pixel.toString());
+
+
+        Icon icon;
+        icon = new Icon(5, 5);
+        System.out.println("Icon Test 1:\n" + icon.toString());
+
+        icon.setPixel(1, 2, Pixel);
+        System.out.println("Icon Test 2:\n" + icon.toString());
     }
 }
