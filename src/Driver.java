@@ -15,6 +15,13 @@ public class Driver {
         icon = new Icon(5, 5);
         System.out.println("Icon Test 1:\n" + icon.toString());
 
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; i < 5; j++) {
+
+                Pixel = new Pixel(0, 0, 0);
+            }
+        }
+
         icon.setPixel(1, 2, Pixel);
         System.out.println("Icon Test 2:\n" + icon.toString());
     }
