@@ -16,5 +16,6 @@ public class Driver {
 
         icon.setPixel(1, 2, Pixel);
         System.out.println("Icon Test 2:\n" + icon.toString());
+
     }
 }
