@@ -12,6 +12,10 @@ int result = (x & mask) >> 16  00000000000000000000000001010101 // 170
 
     private int rgb; //   >> shift right    |    << shift left
 
+    private static final int RED_MASK = 0x000000FF;
+    private static final int GREEN_MASK = 0x0000FF00;
+    private static final int BLUE_MASK = 0x00FF0000;
+
     // private int red;
     // private int green;
     // private int blue;
@@ -30,42 +34,53 @@ int result = (x & mask) >> 16  00000000000000000000000001010101 // 170
         setBlue(blue);
     }
 
+    public String toStringHex() {
+        return String.format("#%02X%02X%02X", getRed(), getGreen(), getBlue());
+    }
+
     public String toString() {
         return "rgb(" + getRed() + ", " + getGreen() + ", " + getBlue() + ")";
     }
     
     public int getRed() {
+        return rgb & RED_MASK;
         //return red;
     }
-    public void setRed(int r) {
+    public void setRed(int r) {  //Red: bits 0-7
         if(r >= 0 && r <= 255) {
+            rgb = (rgb & ~RED_MASK) | (r & RED_MASK);
             //red = r;
         } else {
+            rgb = (rgb & ~ RED_MASK); // set red to 0
             //red = 0;
         }
     }
 
     public int getGreen() {
+        return (rgb & GREEN_MASK) >> 8;
         //return green;
     }
-    public void setGreen(int g) {
+    public void setGreen(int g) {   //Green: bits 8-15
         if(g >= 0 && g <= 255) {
+            rgb = (rgb & ~GREEN_MASK) | ((g << 8) & GREEN_MASK);
             //green = g;
         } else {
+            rgb = (rgb & ~GREEN_MASK);
             //green = 0;
         }
     }
 
     public int getBlue() {
+        return (rgb & BLUE_MASK) >> 16;
         //return blue;
-        int blueMask = 0b00000000000000000000000011111111;
-        return (rgb & blueMask);
     }
     public void setBlue(int b) {
         if(b >= 0 && b <= 255) {
+            rgb = (rgb & ~BLUE_MASK) | ((b << 16) & BLUE_MASK);
             //blue = b;
             //rgb = ???;
         } else {
+            rgb = (rgb & ~BLUE_MASK);
             //blue = 0;
         }
     }
