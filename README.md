@@ -1,11 +1,10 @@
-# [Project Title]
+# lab 0 CSC2910
 
-Replace this project title with the lab or assignment name.
-
+this is first lab
 ## Your Information
 
-- **Name:**
-- **Date:**
+- **Rey Trejo:**
+- **9/2/2026:**
 
 ## How to Run
 
@@ -18,7 +17,10 @@ The output appears in the terminal panel at the bottom.
 
 ## Notes
 
-Add any notes about your solution here.
+MyDate: takes 3 ints of a date and returns them as a string with toString()
+Pixel: takes 3 ints 0 through 255 to represent the 3 rgb color values
+Icon: this class is able to take in Pixels and turn them into a custom 2D grid of pixels
+
 
 ## Course Policy
 
